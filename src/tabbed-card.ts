@@ -43,7 +43,7 @@ interface Tab {
   card: LovelaceCardConfig;
 }
 
-@customElement("tabbed-card")
+@customElement("tabbed-card-programmable")
 export class TabbedCard extends LitElement {
   @property({ attribute: false }) public hass!: HomeAssistant;
   @property() protected selectedTabIndex = 0;
@@ -215,13 +215,13 @@ export class TabbedCard extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "tabbed-card": TabbedCard;
+    "tabbed-card-programmable": TabbedCard;
   }
 }
 
 (window as any).customCards = (window as any).customCards || [];
 (window as any).customCards.push({
-  type: "tabbed-card",
-  name: "Tabbed Card",
-  description: "A tabbed card of cards.",
+  type: "tabbed-card-programmable",
+  name: "Tabbed Card Programmable",
+  description: "A tabbed card of cards. Programmable.",
 });
