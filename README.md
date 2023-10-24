@@ -1,6 +1,16 @@
-# Tabbed Card
+# Tabbed Card Programmable
+#### based on kingshat's [Tabbed Card](https://github.com/kinghat/tabbed-card)
 
 A custom card for home assistant that utilizes tabs to segregate individual cards.
+
+#### Changes from kingshat's version:
+Added support for conditional default index of tabs like this:
+````
+type: custom:tabbed-card-programmable
+options:
+  defaultTabIndex: '{% if now().hour > 17 %}2{% elif now().hour > 12 %}1{% else %}0{% endif %}'
+````
+As kingshat did not respond to my pull request (https://github.com/kinghat/tabbed-card/pull/105) for 4 months, I decided to publish this as a separate card.
 
 ![Tabbed Card](assets/tabbed-card.png)
 
@@ -13,9 +23,9 @@ Use [HACS](https://hacs.xyz) or follow this [guide](https://github.com/thomaslov
 ## Card Schema
 
 ```yaml
-type: custom:tabbed-card
+type: custom:tabbed-card-programmable
 options?:
-  defaultTabIndex?: number
+  defaultTabIndex?: number | string
 styles?:
 attributes?:
   label?: string
@@ -40,7 +50,7 @@ tabs:
 ### Example
 
 ```yaml
-- type: custom:tabbed-card
+- type: custom:tabbed-card-programmable
   tabs:
     - card:
         type: button
@@ -91,7 +101,7 @@ You can apply global and per tab configuration to your card. Global configuratio
 | `defaultTabIndex` | `0`     | tab to display on first render |
 
 ```yaml
-type: custom:tabbed-card
+type: custom:tabbed-card-programmable
 options:
   defaultTabIndex: 1 # in a 0 based index, the second tab would be the active tab on render
 tabs: ...
@@ -110,7 +120,7 @@ Default Custom Properties:
 | `--mdc-typography-button-font-size`  | `14px`                     | Font size of the tab label.                                                                                                                                    |
 
 ```yaml
-type: custom:tabbed-card
+type: custom:tabbed-card-programmable
 styles: # global styles applied to all tabs
   --mdc-theme-primary: yellow
   --mdc-tab-text-label-color-default: orange
@@ -135,7 +145,7 @@ See the full list of exposed custom properties: [`<mwc-tab>`](https://github.com
 Global attributes:
 
 ```yaml
-type: custom:tabbed-card
+type: custom:tabbed-card-programmable
 styles:
   ...
 attributes:
@@ -159,7 +169,7 @@ tabs:
 Local attributes:
 
 ```yaml
-type: custom:tabbed-card
+type: custom:tabbed-card-programmable
 styles: ...
 tabs:
   - attributes:
@@ -201,4 +211,4 @@ tabs:
 
 ## Appreciation
 
-Thanks for the support and services provided ![Home Assistant](https://avatars.githubusercontent.com/u/13844975?s=24) [Home Assistant](https://www.home-assistant.io/), ![HACS](https://avatars.githubusercontent.com/u/56713226?s=24) [HACS](https://hacs.xyz/) and ![lit](https://avatars.githubusercontent.com/u/18489846?s=24) [lit](https://lit.dev/) 🥰 Aslo, thanks to the [swipe-card](https://github.com/bramkragten/swipe-card) for inspiration and all of the other open source cards/projects as references.
+Thanks to kingshat for the original [Tabbed Card](https://github.com/kinghat/tabbed-card)
