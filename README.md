@@ -1,5 +1,5 @@
 # Tabbed Card Programmable
-#### based on kingshat's [Tabbed Card](https://github.com/kinghat/tabbed-card)
+#### based on kinghat's [Tabbed Card](https://github.com/kinghat/tabbed-card)
 
 A custom card for home assistant that utilizes tabs to segregate individual cards.
 
@@ -10,7 +10,7 @@ type: custom:tabbed-card-programmable
 options:
   defaultTabIndex: '{% if now().hour > 17 %}2{% elif now().hour > 12 %}1{% else %}0{% endif %}'
 ````
-As kingshat did not respond to my pull request (https://github.com/kinghat/tabbed-card/pull/105) for 4 months, I decided to publish this as a separate card.
+As the original dev kinghat did not respond to my pull request (https://github.com/kinghat/tabbed-card/pull/105) for 4 months, I decided to publish this as a separate card.
 
 ![Tabbed Card](assets/tabbed-card.png)
 
@@ -211,4 +211,4 @@ tabs:
 
 ## Appreciation
 
-Thanks to kingshat for the original [Tabbed Card](https://github.com/kinghat/tabbed-card)
+Thanks to kinghat for the original [Tabbed Card](https://github.com/kinghat/tabbed-card)
