@@ -2,7 +2,7 @@ title: Tabbed Cards
 views:
   - title: Map First
     cards:
-      - type: custom:tabbed-card
+      - type: custom:tabbed-card-programmable
         tabs:
           - attributes:
               label: Map Tab
@@ -37,7 +37,7 @@ views:
               show_state: true
   - title: Map Second
     cards:
-      - type: custom:tabbed-card
+      - type: custom:tabbed-card-programmable
         tabs:
           - attributes:
               label: Grid
@@ -72,7 +72,7 @@ views:
               show_state: true
   - title: Solo
     cards:
-      - type: custom:tabbed-card
+      - type: custom:tabbed-card-programmable
         tabs:
           - attributes:
               label: Grid
@@ -189,7 +189,7 @@ views:
         entities:
           - air_quality.demo_air_quality_home
           - air_quality.demo_air_quality_office
-      - type: custom:tabbed-card
+      - type: custom:tabbed-card-programmable
         tabs:
           - attributes:
               label: Grid
@@ -307,7 +307,7 @@ views:
         entity: alarm_control_panel.security
   - title: Styled
     cards:
-      - type: custom:tabbed-card
+      - type: custom:tabbed-card-programmable
         options:
           defaultTabIndex: 1
         styles:

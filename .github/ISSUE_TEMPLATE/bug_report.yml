@@ -37,7 +37,7 @@ body:
       label: Reproducible configuration
       description: Provide a minimal reproducible configuration of your card that demonstrates the bug.
       placeholder: |
-        type: custom:tabbed-card
+        type: custom:tabbed-card-programmable
         tabs:
           - card:
               type: entity

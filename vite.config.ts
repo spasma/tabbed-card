@@ -10,7 +10,7 @@ export default defineConfig(({ command, mode }) => {
           "tabbed-card": resolve(__dirname, "src/tabbed-card.ts"),
         },
         output: {
-          entryFileNames: "[name].js",
+          entryFileNames: "tabbed-card-programmable.js",
         },
       },
     },
